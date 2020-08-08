@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
+</head>
+<body>
+
+<h2>MOHAMED ALAA</h2>
+<p>Click on the button to open the video in fullscreen mode.</p>
+<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
+<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+
+<video width="100%" controls id="myvideo">
+  <source src="gana.mp4" type="video/mp4">
+  <source src="gana.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+
+<script>
+var elem = document.getElementById("myvideo");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+
+<p>حمود الخضر
+<br>
+هيا جنه
+<br> 
+بدون موسيقي
+</p>
+<h2>لتحميل الاغنيه</h2>
+
+<button class="btn"><i class="fa fa-download"></i> Download</button>
+
+
+
+
+
+</body>
+</html>
+
